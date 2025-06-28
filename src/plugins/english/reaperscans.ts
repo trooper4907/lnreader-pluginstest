@@ -1,8 +1,8 @@
 import { fetchApi } from '@libs/fetch';
 import type { Plugin } from '@typings/plugin';
 
-const API_BASE = 'https://api.reaperscans.com';
-const MEDIA_BASE = 'https://media.reaperscans.com/file/4SRBHm/';
+const API_BASE = 'https://api.wetriedtls.com';
+const MEDIA_BASE = 'https://media.wetriedtls.com/file/4SRBHm/';
 
 interface ApiResponse<T> {
   data: T;
@@ -21,11 +21,11 @@ interface ReaperNovel {
 }
 
 class ReaperScans implements Plugin.PluginBase {
-  id = 'reaperscans.com';
+  id = 'wetriedtls.com';
   name = 'Reaper Scans';
   version = '1.0.0';
   icon = 'src/en/reaperscans/icon.png';
-  site = 'https://reaperscans.com';
+  site = 'https://wetriedtls.com';
 
   async popularNovels(page: number): Promise<Plugin.NovelItem[]> {
     return this.query(page);
